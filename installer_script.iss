@@ -10,7 +10,11 @@ SolidCompression=yes
 SetupIconFile=resources\icons\app_icon.ico
 
 [Files]
-Source: "dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+; Теперь копируем только один файл!
+Source: "dist\SecureMessenger.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+; Если есть другие файлы, которые нужно копировать:
+; Source: "dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{group}\SecureMessenger"; Filename: "{app}\SecureMessenger.exe"
