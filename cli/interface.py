@@ -27,9 +27,14 @@ class MessengerApp:
             print("Generating new keys...")
             self.crypto_manager.generate_keys()
             
-        # Подключение к серверу
-        if not self.client.connect():
+        # Подключение к серверу с поддержкой P2P
+        if not self.client.connect(crypto_manager=self.crypto_manager):
             print("Warning: Could not connect to server")
+            
+        # Получаем публичный адрес для P2P
+        p2p_addr = self.client.get_p2p_address()
+        if p2p_addr:
+            print(f"P2P address: {p2p_addr[0]}:{p2p_addr[1]}")
             
         # Установка callback для сообщений
         self.client.set_message_callback(self._handle_incoming_message)
