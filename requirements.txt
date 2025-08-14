@@ -1,0 +1,5 @@
+cryptography>=3.4.8
+sqlalchemy>=1.4.0
+click>=8.0.0
+PyQt5>=5.15.0
+cx_Freeze>=6.10.0
