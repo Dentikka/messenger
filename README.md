@@ -21,8 +21,8 @@
 
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/yourusername/secure-messenger.git
-cd secure-messenger
+git clone https://github.com/Dentikka/messenger.git
+cd messenger
 ```
 
 ### 2. Установка зависимостей
